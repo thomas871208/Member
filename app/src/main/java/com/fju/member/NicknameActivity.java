@@ -5,12 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class NicknameActivity extends AppCompatActivity {
     EditText nickname;
     String nk;
     SharedPreferences pres;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,4 +31,12 @@ public class NicknameActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
-}
+    public void next(View view) {
+        //Intent intent1 = new Intent(NicknameActivity.this, AgeActivity.class);
+        //intent1.putExtra("nickname", nk);
+        //startActivity(intent1);
+        Log.d("haha", "aaaaa ");
+    }
+
+
+    }
