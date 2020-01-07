@@ -10,11 +10,21 @@ import android.widget.EditText;
 public class AgeActivity extends AppCompatActivity {
   EditText edage;
   int age;
+  String sex;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_age);
         edage = findViewById(R.id.edage);
+        Intent intent = new Intent();
+        sex = intent.getStringExtra("sex");
+        if(sex ==null){
+            startActivity(intent);
+        }else{
+            Intent intent1 = new Intent(AgeActivity.this,NicknameActivity.class);
+            startActivity(intent1);
+
+        }
 
     }
     public void next(View view){
